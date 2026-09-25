@@ -1,0 +1,682 @@
+```css
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f5f7fb;
+}
+
+
+/* ========================================
+   COMMON STYLES
+======================================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #dbeafe;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 15px 20px;
+
+    background: white;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    font-weight: 600;
+    color: #1f2937;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+section,
+aside {
+    margin: 30px 20px;
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+section h2,
+aside h2 {
+    font-size: 28px;
+}
+
+
+/* ========================================
+   HOME SECTION
+======================================== */
+
+#home {
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #eff6ff
+        );
+}
+
+#home h2 {
+    font-size: 42px;
+    color: #1e3a8a;
+}
+
+#home p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+#about article {
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   SKILLS
+======================================== */
+
+#skills h3 {
+    margin-top: 25px;
+}
+
+#skills ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+#skills li {
+    padding: 10px 18px;
+
+    background: #eff6ff;
+
+    color: #1e40af;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+#skills li:hover {
+    background: #2563eb;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+thead {
+    background: #1e3a8a;
+
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+#projects {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+}
+
+#projects > h2 {
+    grid-column: 1 / -1;
+}
+
+#projects article {
+    margin: 0;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.10);
+}
+
+#projects article a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 8px 15px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 6px;
+}
+
+#projects article a:hover {
+    background: #1d4ed8;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   EDUCATION
+======================================== */
+
+section ol {
+    padding-left: 25px;
+}
+
+section ol li {
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 6px;
+}
+
+
+/* ========================================
+   PROFILE IMAGE
+======================================== */
+
+img {
+    display: block;
+
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    margin: 20px auto;
+
+    border-radius: 50%;
+
+    border: 5px solid #2563eb;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+form {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    background: white;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ========================================
+   INPUT FOCUS
+======================================== */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* ========================================
+   RADIO AND CHECKBOX
+======================================== */
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+
+    accent-color: #2563eb;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background: #6b7280;
+}
+
+button[type="reset"]:hover {
+    background: #4b5563;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+aside {
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+}
+
+aside p {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   HORIZONTAL LINE
+======================================== */
+
+hr {
+    display: none;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 40px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #111827;
+
+    color: white;
+}
+
+footer p {
+    margin-bottom: 5px;
+
+    color: #d1d5db;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    section,
+    aside {
+        margin: 20px 12px;
+
+        padding: 25px;
+    }
+
+    #home {
+        min-height: 400px;
+    }
+
+    #home h2 {
+        font-size: 32px;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #projects > h2 {
+        grid-column: auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    section,
+    aside {
+        margin: 15px 8px;
+
+        padding: 20px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    #skills ul {
+        flex-direction: column;
+    }
+
+    #skills li {
+        text-align: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+}
